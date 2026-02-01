@@ -133,17 +133,9 @@ log.path=/var/log/app.log
 <script>
 // RSS proxies - tries each in order. allorigins raw works for XML/RSS.
 // For HTML (comments), we use a separate set that supports full HTML.
-const RSS_PROXIES = [
-    (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-    (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
-    (url) => `https://proxy.cors.sh/${url}`,
-];
-
-const HTML_PROXIES = [
-    (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-    (url) => `https://proxy.cors.sh/${url}`,
-    (url) => `https://crossorigin.me/${url}`,
-];
+const PROXY = (url) => `https://news-proxy.beebul.workers.dev?url=${encodeURIComponent(url)}`;
+const RSS_PROXIES = [PROXY];
+const HTML_PROXIES = [PROXY];
 
 const FEEDS = {
     ozbargain: { url: 'https://www.ozbargain.com.au/feed', label: 'OZB' },
