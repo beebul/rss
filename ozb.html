@@ -15,216 +15,76 @@
             line-height: 1.6;
             font-size: 14px;
         }
-        body.hidden-mode {
-            background: #1e1e1e;
-            color: #d4d4d4;
-        }
+        body.hidden-mode { background: #1e1e1e; color: #d4d4d4; }
         body.hidden-mode .header,
-        body.hidden-mode .deal,
-        body.hidden-mode .footer {
-            display: none;
-        }
-        body.hidden-mode .fake-content {
-            display: block;
-        }
-        .fake-content {
-            display: none;
-        }
-        a {
-            color: #000000;
-            text-decoration: none;
-        }
-        a:visited {
-            color: #000000;
-        }
-        a:hover {
-            color: #333333;
-        }
-        .header {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #000;
-            padding-bottom: 10px;
-        }
-        .controls {
-            margin-bottom: 20px;
-            padding: 10px 0;
-            border-bottom: 1px dashed #ccc;
-        }
+        body.hidden-mode .controls,
+        body.hidden-mode #content,
+        body.hidden-mode .footer,
+        body.hidden-mode .status-bar { display: none; }
+        body.hidden-mode .fake-content { display: block; }
+        .fake-content { display: none; }
+        a { color: #000; text-decoration: none; }
+        a:visited { color: #000; }
+        a:hover { color: #333; }
+        .header { margin-bottom: 20px; border-bottom: 1px solid #000; padding-bottom: 10px; }
+        .controls { margin-bottom: 20px; padding: 10px 0; border-bottom: 1px dashed #ccc; }
         .controls input, .controls select, .controls button {
             font-family: 'Consolas', 'Courier New', monospace;
-            font-size: 13px;
-            padding: 4px 8px;
-            margin-right: 10px;
-            margin-bottom: 5px;
-            border: 1px solid #666;
-            background: #fff;
+            font-size: 13px; padding: 4px 8px; margin-right: 10px; margin-bottom: 5px;
+            border: 1px solid #666; background: #fff; color: #000;
         }
-        .controls button {
-            cursor: pointer;
-        }
-        .controls button:hover {
-            background: #f0f0f0;
-        }
-        .feed-selector {
-            margin-bottom: 10px;
-        }
-        .feed-selector label {
-            margin-right: 15px;
-            font-size: 13px;
-        }
-        .feed-selector input[type="checkbox"] {
-            margin-right: 5px;
-        }
-        .loading {
-            font-style: italic;
-            color: #666;
-        }
-        .error {
-            border: 1px solid #000;
-            padding: 10px;
-            margin: 20px 0;
-        }
-        .deal {
-            margin: 25px 0;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #ccc;
-            transition: opacity 0.3s;
-        }
-        .deal.read {
-            opacity: 0.4;
-        }
-        .deal.expired {
-            opacity: 0.3;
-            text-decoration: line-through;
-        }
-        .deal.hidden {
-            display: none;
-        }
-        .deal.highlighted {
-            background: #ffffcc;
-            padding: 10px;
-            margin-left: -10px;
-            margin-right: -10px;
-        }
-        .deal:last-child {
-            border-bottom: none;
-        }
-        .deal-title {
-            font-weight: normal;
-            margin-bottom: 5px;
-        }
-        .deal-meta {
-            color: #666;
-            font-size: 13px;
-            margin: 3px 0;
-        }
-        .deal-description {
-            margin-top: 8px;
-            color: #333;
-        }
-        .deal-actions {
-            margin-top: 8px;
-            font-size: 12px;
-        }
+        .controls button { cursor: pointer; }
+        .controls button:hover { background: #f0f0f0; }
+        .feed-selector { margin-bottom: 10px; }
+        .feed-selector label { margin-right: 15px; font-size: 13px; }
+        .feed-selector input[type="checkbox"] { margin-right: 5px; }
+        .loading { font-style: italic; color: #666; }
+        .error { border: 1px solid #000; padding: 10px; margin: 20px 0; }
+        .deal { margin: 25px 0; padding-bottom: 20px; border-bottom: 1px dashed #ccc; transition: opacity 0.3s; }
+        .deal.read { opacity: 0.4; }
+        .deal.expired { opacity: 0.3; }
+        .deal.expired .deal-title { text-decoration: line-through; }
+        .deal:last-child { border-bottom: none; }
+        .deal-title { font-weight: normal; margin-bottom: 5px; }
+        .deal-meta { color: #666; font-size: 13px; margin: 3px 0; }
+        .deal-description { margin-top: 8px; color: #333; }
+        .deal-actions { margin-top: 8px; font-size: 12px; }
         .deal-actions button {
-            background: none;
-            border: none;
-            padding: 0 8px 0 0;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 12px;
-            color: #666;
+            background: none; border: none; padding: 0 8px 0 0;
+            cursor: pointer; font-family: inherit; font-size: 12px; color: #666;
         }
-        .deal-actions button:hover {
-            color: #000;
-        }
-        .comments-section {
-            margin-top: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #ddd;
-            display: none;
-        }
-        .comments-section.loading {
-            display: block;
-            color: #666;
-            font-style: italic;
-        }
-        .comments-section.loaded {
-            display: block;
-        }
-        .comment {
-            margin: 10px 0;
-            padding: 8px 0;
-            border-bottom: 1px dotted #eee;
-        }
-        .comment:last-child {
-            border-bottom: none;
-        }
-        .comment-author {
-            font-weight: bold;
-            font-size: 13px;
-        }
-        .comment-text {
-            margin-top: 3px;
-        }
-        .comment-meta {
-            color: #999;
-            font-size: 12px;
-            margin-top: 3px;
-        }
+        .deal-actions button:hover { color: #000; }
+        .deal.highlighted { background: #ffffcc; padding: 10px; margin-left: -10px; margin-right: -10px; }
+        .comments-section { margin-top: 15px; padding-left: 20px; border-left: 2px solid #ddd; display: none; }
+        .comments-section.loading { display: block; color: #666; font-style: italic; }
+        .comments-section.loaded { display: block; }
+        .comment { margin: 10px 0; padding: 8px 0; border-bottom: 1px dotted #eee; }
+        .comment:last-child { border-bottom: none; }
+        .comment-author { font-weight: bold; font-size: 13px; }
+        .comment-text { margin-top: 3px; }
+        .comment-meta { color: #999; font-size: 12px; margin-top: 3px; }
         .toggle-comments {
-            color: #000000;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 13px;
-            background: none;
-            border: none;
-            padding: 0;
-            font-family: inherit;
+            color: #000; text-decoration: none; cursor: pointer;
+            font-size: 13px; background: none; border: none; padding: 0; font-family: inherit;
         }
-        .toggle-comments:hover {
-            color: #333333;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #000;
-            color: #666;
-            font-size: 12px;
-        }
-        .retry-btn {
-            background: none;
-            border: 1px solid #000;
-            padding: 5px 15px;
-            cursor: pointer;
-            font-family: inherit;
-            margin-top: 10px;
-        }
-        .retry-btn:hover {
-            background: #f0f0f0;
-        }
+        .toggle-comments:hover { color: #333; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #000; color: #666; font-size: 12px; }
         .status-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #f0f0f0;
-            border-top: 1px solid #ccc;
-            padding: 5px 20px;
-            font-size: 11px;
-            color: #666;
-            text-align: right;
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: #f0f0f0; border-top: 1px solid #ccc;
+            padding: 5px 20px; font-size: 11px; color: #666; text-align: right;
         }
-        .keyboard-help {
-            font-size: 11px;
-            color: #999;
-            margin-top: 5px;
+        .keyboard-help { font-size: 11px; color: #999; margin-top: 5px; }
+        .retry-btn {
+            background: none; border: 1px solid #000; padding: 5px 15px;
+            cursor: pointer; font-family: inherit; margin-top: 10px;
         }
+        .retry-btn:hover { background: #f0f0f0; }
     </style>
 </head>
 <body>
-    <div class="header">ozb.txt v9</div>
-    
+    <div class="header">ozb.txt v10</div>
+
     <div class="controls">
         <div class="feed-selector">
             <label><input type="checkbox" id="feed-ozbargain" checked> OzBargain</label>
@@ -232,7 +92,7 @@
             <label><input type="checkbox" id="feed-guardian"> Guardian AU</label>
             <label><input type="checkbox" id="feed-bbc"> BBC Tech</label>
         </div>
-        <input type="text" id="search" placeholder="filter by keyword..." style="width: 200px;">
+        <input type="text" id="search" placeholder="filter by keyword...">
         <select id="sort">
             <option value="date">Sort: Newest</option>
             <option value="oldest">Sort: Oldest</option>
@@ -242,11 +102,11 @@
         <button onclick="manualRefresh()">Refresh</button>
         <div class="keyboard-help">[ESC: hide mode] [R: refresh] [H: toggle read] [/: search]</div>
     </div>
-    
+
     <div id="content" class="loading">Loading...</div>
-    
+
     <div class="fake-content">
-        <pre>
+<pre>
 # Configuration File
 # Last modified: 2025-12-29
 
@@ -254,7 +114,7 @@ server.port=8080
 server.host=localhost
 database.url=jdbc:mysql://localhost:3306/mydb
 database.username=admin
-database.password=********
+database.password=########
 
 # Cache settings
 cache.enabled=true
@@ -264,331 +124,256 @@ cache.max_size=1000
 # Logging
 log.level=INFO
 log.path=/var/log/app.log
-        </pre>
+</pre>
     </div>
-    
-    <div class="footer" id="footer">
-        Last updated: --:-- | Auto-refresh: ON (15min) | Deals shown: 0
-    </div>
-    
+
+    <div class="footer" id="footer">Last updated: --:-- | Auto-refresh: ON (15min) | Deals shown: 0</div>
     <div class="status-bar" id="status">Ready</div>
 
-    <script>
-        const PROXIES = [
-            'https://corsproxy.io/?',
-            'https://api.allorigins.win/raw?url=',
-        ];
-        
-        const FEEDS = {
-            ozbargain: 'https://www.ozbargain.com.au/feed',
-            abcnews: 'https://www.abc.net.au/news/feed/51120/rss.xml',
-            guardian: 'https://www.theguardian.com/australia-news/rss',
-            bbc: 'https://feeds.bbci.co.uk/news/technology/rss.xml'
-        };
-        
-        let proxyIndex = 0;
-        let allDeals = [];
-        let readDeals = new Set(JSON.parse(localStorage.getItem('readDeals') || '[]'));
-        let hideRead = false;
-        let autoRefreshInterval;
+<script>
+// RSS proxies - tries each in order. allorigins raw works for XML/RSS.
+// For HTML (comments), we use a separate set that supports full HTML.
+const RSS_PROXIES = [
+    (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+    (url) => `https://proxy.cors.sh/${url}`,
+];
 
-        // Keyboard shortcuts
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                document.body.classList.toggle('hidden-mode');
-            } else if (e.key === 'r' || e.key === 'R') {
-                if (!e.ctrlKey && !e.metaKey) {
-                    e.preventDefault();
-                    manualRefresh();
-                }
-            } else if (e.key === 'h' || e.key === 'H') {
-                if (!e.ctrlKey && !e.metaKey) {
-                    e.preventDefault();
-                    toggleReadDeals();
-                }
-            } else if (e.key === '/') {
-                e.preventDefault();
-                document.getElementById('search').focus();
+const HTML_PROXIES = [
+    (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    (url) => `https://proxy.cors.sh/${url}`,
+    (url) => `https://crossorigin.me/${url}`,
+];
+
+const FEEDS = {
+    ozbargain: { url: 'https://www.ozbargain.com.au/feed', label: 'OZB' },
+    abcnews:   { url: 'https://www.abc.net.au/news/feed/51120/rss.xml', label: 'ABC' },
+    guardian:  { url: 'https://www.theguardian.com/australia-news/rss', label: 'GUA' },
+    bbc:       { url: 'https://feeds.bbci.co.uk/news/technology/rss.xml', label: 'BBC' }
+};
+
+let allDeals = [];
+let readDeals = new Set();
+let hideRead = false;
+
+// Load read deals from storage
+try {
+    const stored = window.storage ? null : JSON.parse(localStorage.getItem('readDeals') || '[]');
+    if (stored) readDeals = new Set(stored);
+} catch(e) {}
+
+function saveReadDeals() {
+    try { localStorage.setItem('readDeals', JSON.stringify([...readDeals])); } catch(e) {}
+}
+
+function updateStatus(msg) {
+    document.getElementById('status').textContent = msg;
+}
+
+// Try fetching a URL through multiple proxies until one works
+async function fetchWithProxy(url, proxies) {
+    let lastErr;
+    for (const proxyFn of proxies) {
+        try {
+            const res = await fetch(proxyFn(url), { signal: AbortSignal.timeout(10000) });
+            if (res.ok) {
+                const text = await res.text();
+                // Sanity check - make sure we got something back
+                if (text && text.length > 50) return text;
             }
+        } catch(e) { lastErr = e; }
+    }
+    throw lastErr || new Error('All proxies failed');
+}
+
+// Parse an RSS/Atom feed into deal objects
+function parseFeed(xml, feedKey) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xml, 'text/xml');
+    if (doc.querySelector('parsererror')) throw new Error('XML parse error');
+
+    const { label } = FEEDS[feedKey];
+    const items = doc.querySelectorAll('item, entry');
+    const deals = [];
+
+    items.forEach((item, i) => {
+        const title = (item.querySelector('title')?.textContent || '').trim();
+        // Atom feeds put link in an attribute; RSS in text content
+        let link = item.querySelector('link')?.getAttribute('href') ||
+                   item.querySelector('link')?.textContent?.trim() || '#';
+        const desc = (item.querySelector('description, summary, content')?.textContent || '')
+            .replace(/<[^>]*>/g, '').trim();
+        const dateRaw = item.querySelector('pubDate, published, updated')?.textContent || '';
+        const date = dateRaw ? new Date(dateRaw) : new Date();
+
+        if (!title) return;
+        deals.push({
+            id: `${feedKey}-${i}-${date.getTime()}`,
+            title, link, description: desc, date,
+            timestamp: date.getTime(),
+            source: feedKey, label
+        });
+    });
+    return deals;
+}
+
+async function fetchFeed(feedKey) {
+    const { url } = FEEDS[feedKey];
+    try {
+        const xml = await fetchWithProxy(url, RSS_PROXIES);
+        return parseFeed(xml, feedKey);
+    } catch(e) {
+        console.error(`Failed to fetch ${feedKey}:`, e);
+        return [];
+    }
+}
+
+async function fetchAllFeeds() {
+    updateStatus('Fetching feeds...');
+    const promises = Object.keys(FEEDS)
+        .filter(k => document.getElementById(`feed-${k}`)?.checked)
+        .map(k => fetchFeed(k));
+
+    const results = await Promise.all(promises);
+    allDeals = results.flat();
+    renderDeals();
+    updateStatus('Ready');
+}
+
+// --- Comments scraping ---
+async function fetchComments(dealUrl, dealId) {
+    const div = document.getElementById(`comments-${dealId}`);
+    div.className = 'comments-section loading';
+    div.innerHTML = 'Loading comments...';
+
+    try {
+        const html = await fetchWithProxy(dealUrl, HTML_PROXIES);
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+
+        const commentEls = doc.querySelectorAll('.comment, [class*="comment"]');
+        const seen = new Set();
+        let out = '', count = 0;
+
+        commentEls.forEach(el => {
+            if (count >= 10) return;
+            const author = (el.querySelector('.submitted, .author, [class*="author"]')?.textContent || 'Anonymous').trim();
+            const text = (el.querySelector('.comment-text, .content, [class*="text"]')?.textContent ||
+                          el.textContent || '').trim();
+
+            if (text.includes('Login or Join') || text.includes('Login Join') || text.length < 15) return;
+
+            const key = text.substring(0, 100).toLowerCase();
+            if (seen.has(key)) return;
+            seen.add(key);
+
+            out += `<div class="comment">
+                <div class="comment-author">${author}:</div>
+                <div class="comment-text">${text.substring(0, 500)}${text.length > 500 ? '...' : ''}</div>
+            </div>`;
+            count++;
         });
 
-        // Search filter
-        document.getElementById('search').addEventListener('input', renderDeals);
-        document.getElementById('sort').addEventListener('change', renderDeals);
-        
-        // Feed checkboxes
-        ['ozbargain', 'abcnews', 'guardian', 'bbc'].forEach(feed => {
-            document.getElementById(`feed-${feed}`).addEventListener('change', () => {
-                fetchAllFeeds();
-            });
-        });
+        div.innerHTML = out || 'No comments found.';
+        if (count) div.innerHTML += `<div class="comment-meta">Showing ${count} comments</div>`;
+        div.className = 'comments-section loaded';
+    } catch(e) {
+        div.innerHTML = 'Failed to load comments. Try opening the deal directly.';
+        div.className = 'comments-section loaded';
+    }
+}
 
-        function updateStatus(msg) {
-            document.getElementById('status').textContent = msg;
-        }
+function toggleComments(dealUrl, dealId) {
+    const div = document.getElementById(`comments-${dealId}`);
+    const btn = document.getElementById(`toggle-${dealId}`);
 
-        function markAsRead(dealId) {
-            readDeals.add(dealId);
-            localStorage.setItem('readDeals', JSON.stringify([...readDeals]));
-            renderDeals();
-        }
+    if (div.style.display === 'none' || !div.className.includes('loaded')) {
+        div.style.display = 'block';
+        btn.textContent = '[hide comments]';
+        if (!div.className.includes('loaded')) fetchComments(dealUrl, dealId);
+    } else {
+        div.style.display = 'none';
+        btn.textContent = '[view comments]';
+    }
+}
 
-        function toggleReadDeals() {
-            hideRead = !hideRead;
-            renderDeals();
-        }
+// --- Render ---
+function renderDeals() {
+    const term = document.getElementById('search').value.toLowerCase();
+    const sort = document.getElementById('sort').value;
+    const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
 
-        function clearReadDeals() {
-            if (confirm('Clear all read deals?')) {
-                readDeals.clear();
-                localStorage.setItem('readDeals', '[]');
-                renderDeals();
-            }
-        }
+    let filtered = allDeals.filter(d =>
+        !term || d.title.toLowerCase().includes(term) || d.description.toLowerCase().includes(term)
+    );
 
-        function manualRefresh() {
-            updateStatus('Refreshing...');
-            fetchAllFeeds();
-        }
+    filtered.sort((a, b) => sort === 'oldest' ? a.timestamp - b.timestamp : b.timestamp - a.timestamp);
 
-        function toggleComments(dealUrl, dealId) {
-            const commentsDiv = document.getElementById(`comments-${dealId}`);
-            const toggleBtn = document.getElementById(`toggle-${dealId}`);
-            
-            if (commentsDiv.style.display === 'none' || !commentsDiv.className.includes('loaded')) {
-                commentsDiv.style.display = 'block';
-                toggleBtn.textContent = '[hide comments]';
-                if (!commentsDiv.className.includes('loaded')) {
-                    fetchComments(dealUrl, dealId);
-                }
-            } else {
-                commentsDiv.style.display = 'none';
-                toggleBtn.textContent = '[view comments]';
-            }
-        }
+    let html = '', visible = 0;
 
-        async function fetchComments(dealUrl, dealId) {
-            const commentsDiv = document.getElementById(`comments-${dealId}`);
-            commentsDiv.className = 'comments-section loading';
-            commentsDiv.innerHTML = 'Loading comments...';
-            
-            try {
-                const proxy = PROXIES[0];
-                const response = await fetch(proxy + encodeURIComponent(dealUrl));
-                if (!response.ok) throw new Error('Failed to fetch page');
-                
-                const html = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                
-                const comments = doc.querySelectorAll('.comment, [class*="comment"]');
-                
-                if (comments.length === 0) {
-                    commentsDiv.innerHTML = 'No comments found or unable to parse comments.';
-                    commentsDiv.className = 'comments-section loaded';
-                    return;
-                }
-                
-                let commentsHtml = '';
-                let count = 0;
-                const seenComments = new Set();
-                
-                comments.forEach((comment) => {
-                    if (count >= 10) return;
-                    
-                    const author = comment.querySelector('.submitted, .author, [class*="author"]')?.textContent?.trim() || 'Anonymous';
-                    const text = comment.querySelector('.comment-text, .content, [class*="text"]')?.textContent?.trim() || 
-                                 comment.textContent?.trim() || '';
-                    
-                    if (text.includes('Login or Join to leave a comment') || 
-                        text.includes('Login Join') ||
-                        text.length < 15) {
-                        return;
-                    }
-                    
-                    const textKey = text.substring(0, 100).toLowerCase().trim();
-                    
-                    if (text && !seenComments.has(textKey)) {
-                        seenComments.add(textKey);
-                        commentsHtml += `
-                            <div class="comment">
-                                <div class="comment-author">${author}:</div>
-                                <div class="comment-text">${text.substring(0, 500)}${text.length > 500 ? '...' : ''}</div>
-                            </div>
-                        `;
-                        count++;
-                    }
-                });
-                
-                if (commentsHtml) {
-                    commentsDiv.innerHTML = commentsHtml + `<div class="comment-meta">Showing first ${count} comments</div>`;
-                } else {
-                    commentsDiv.innerHTML = 'Could not extract comments from page.';
-                }
-                commentsDiv.className = 'comments-section loaded';
-                
-            } catch (error) {
-                console.error('Error fetching comments:', error);
-                commentsDiv.innerHTML = 'Failed to load comments.';
-                commentsDiv.className = 'comments-section loaded';
-            }
-        }
+    filtered.forEach((deal, i) => {
+        const isRead = readDeals.has(deal.id);
+        if (hideRead && isRead) return;
+        visible++;
 
-        async function fetchFeed(feedUrl, feedName) {
-            try {
-                const proxy = PROXIES[proxyIndex];
-                const url = proxy + encodeURIComponent(feedUrl);
-                
-                const response = await fetch(url);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                
-                const text = await response.text();
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(text, 'text/xml');
-                
-                const parseError = xml.querySelector('parsererror');
-                if (parseError) throw new Error('Failed to parse RSS feed');
-                
-                const items = xml.querySelectorAll('item');
-                const deals = [];
-                
-                items.forEach((item, index) => {
-                    const title = item.querySelector('title')?.textContent || 'No title';
-                    const link = item.querySelector('link')?.textContent || '#';
-                    const description = item.querySelector('description')?.textContent || '';
-                    const pubDate = item.querySelector('pubDate')?.textContent || '';
-                    
-                    const cleanDesc = description.replace(/<[^>]*>/g, '').trim();
-                    const date = pubDate ? new Date(pubDate) : new Date();
-                    
-                    deals.push({
-                        id: `${feedName}-${index}-${date.getTime()}`,
-                        title,
-                        link,
-                        description: cleanDesc,
-                        date,
-                        source: feedName,
-                        timestamp: date.getTime()
-                    });
-                });
-                
-                return deals;
-                
-            } catch (error) {
-                console.error(`Error fetching ${feedName}:`, error);
-                return [];
-            }
-        }
+        const expired = deal.source === 'ozbargain' && deal.timestamp < weekAgo;
+        const highlighted = term && (deal.title.toLowerCase().includes(term) || deal.description.toLowerCase().includes(term));
+        const cls = ['deal', isRead ? 'read' : '', expired ? 'expired' : '', highlighted ? 'highlighted' : ''].filter(Boolean).join(' ');
 
-        async function fetchAllFeeds() {
-            updateStatus('Fetching feeds...');
-            const enabledFeeds = [];
-            
-            Object.keys(FEEDS).forEach(feed => {
-                if (document.getElementById(`feed-${feed}`).checked) {
-                    enabledFeeds.push(fetchFeed(FEEDS[feed], feed));
-                }
-            });
-            
-            try {
-                const results = await Promise.all(enabledFeeds);
-                allDeals = results.flat();
-                renderDeals();
-                updateStatus('Ready');
-            } catch (error) {
-                console.error('Error fetching feeds:', error);
-                updateStatus('Error loading feeds');
-            }
-        }
+        const dateStr = deal.date.toLocaleString('en-AU', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
-        function renderDeals() {
-            const searchTerm = document.getElementById('search').value.toLowerCase();
-            const sortOrder = document.getElementById('sort').value;
-            
-            let filtered = allDeals.filter(deal => {
-                const matchesSearch = !searchTerm || 
-                    deal.title.toLowerCase().includes(searchTerm) ||
-                    deal.description.toLowerCase().includes(searchTerm);
-                return matchesSearch;
-            });
-            
-            // Sort
-            if (sortOrder === 'oldest') {
-                filtered.sort((a, b) => a.timestamp - b.timestamp);
-            } else {
-                filtered.sort((a, b) => b.timestamp - a.timestamp);
-            }
-            
-            // Check for expired deals (older than 7 days)
-            const weekAgo = Date.now() - (7 * 24 * 60 * 60 * 1000);
-            
-            let html = '';
-            let visibleCount = 0;
-            
-            filtered.forEach((deal, index) => {
-                const isRead = readDeals.has(deal.id);
-                const isExpired = deal.timestamp < weekAgo && deal.source === 'ozbargain';
-                const isHighlighted = searchTerm && (
-                    deal.title.toLowerCase().includes(searchTerm) ||
-                    deal.description.toLowerCase().includes(searchTerm)
-                );
-                
-                if (hideRead && isRead) return;
-                
-                visibleCount++;
-                
-                const classes = ['deal'];
-                if (isRead) classes.push('read');
-                if (isExpired) classes.push('expired');
-                if (isHighlighted) classes.push('highlighted');
-                
-                const dateStr = deal.date.toLocaleString('en-AU', { 
-                    month: 'short', 
-                    day: 'numeric', 
-                    hour: '2-digit', 
-                    minute: '2-digit' 
-                });
-                
-                const sourceLabel = deal.source.toUpperCase();
-                
-                html += `
-                    <div class="${classes.join(' ')}">
-                        <div class="deal-title">
-                            [${index + 1}] <a href="${deal.link}" target="_blank" onclick="markAsRead('${deal.id}')">${deal.title}</a>
-                        </div>
-                        <div class="deal-meta">
-                            ${sourceLabel} | ${dateStr}
-                            ${deal.source === 'ozbargain' ? ` | <button class="toggle-comments" id="toggle-${deal.id}" onclick="toggleComments('${deal.link}', '${deal.id}')">[view comments]</button>` : ''}
-                        </div>
-                        ${deal.description ? `<div class="deal-description">${deal.description.substring(0, 400)}${deal.description.length > 400 ? '...' : ''}</div>` : ''}
-                        <div class="deal-actions">
-                            <button onclick="markAsRead('${deal.id}')">${isRead ? 'unread' : 'mark read'}</button>
-                        </div>
-                        ${deal.source === 'ozbargain' ? `<div id="comments-${deal.id}" class="comments-section" style="display: none;"></div>` : ''}
-                    </div>
-                `;
-            });
-            
-            if (html === '') {
-                html = '<div class="loading">No deals match your filters.</div>';
-            }
-            
-            const now = new Date().toLocaleTimeString('en-AU');
-            html += `<div class="footer">Last updated: ${now} | Auto-refresh: ON (15min) | Deals shown: ${visibleCount}/${allDeals.length}</div>`;
-            
-            document.getElementById('content').innerHTML = html;
-        }
+        html += `<div class="${cls}">
+            <div class="deal-title">
+                [${i + 1}] <a href="${deal.link}" target="_blank" onclick="markAsRead('${deal.id}')">${deal.title}</a>
+            </div>
+            <div class="deal-meta">
+                ${deal.label} | ${dateStr}
+                ${deal.source === 'ozbargain' ? ` | <button class="toggle-comments" id="toggle-${deal.id}" onclick="toggleComments('${deal.link}', '${deal.id}')">[view comments]</button>` : ''}
+            </div>
+            ${deal.description ? `<div class="deal-description">${deal.description.substring(0, 400)}${deal.description.length > 400 ? '...' : ''}</div>` : ''}
+            <div class="deal-actions">
+                <button onclick="${isRead ? `unmarkAsRead('${deal.id}')` : `markAsRead('${deal.id}')`}">${isRead ? 'unread' : 'mark read'}</button>
+            </div>
+            ${deal.source === 'ozbargain' ? `<div id="comments-${deal.id}" class="comments-section" style="display:none;"></div>` : ''}
+        </div>`;
+    });
 
-        // Auto-refresh every 15 minutes
-        function startAutoRefresh() {
-            autoRefreshInterval = setInterval(() => {
-                fetchAllFeeds();
-            }, 15 * 60 * 1000);
-        }
+    if (!html) html = '<div class="loading">No deals match your filters.</div>';
 
-        // Initial load
-        fetchAllFeeds();
-        startAutoRefresh();
-    </script>
+    const now = new Date().toLocaleTimeString('en-AU');
+    html += `<div class="footer">Last updated: ${now} | Auto-refresh: ON (15min) | Deals shown: ${visible}/${allDeals.length}</div>`;
+
+    document.getElementById('content').innerHTML = html;
+}
+
+function markAsRead(id) { readDeals.add(id); saveReadDeals(); renderDeals(); }
+function unmarkAsRead(id) { readDeals.delete(id); saveReadDeals(); renderDeals(); }
+function toggleReadDeals() { hideRead = !hideRead; renderDeals(); }
+function clearReadDeals() {
+    if (confirm('Clear all read deals?')) { readDeals.clear(); saveReadDeals(); renderDeals(); }
+}
+function manualRefresh() { updateStatus('Refreshing...'); fetchAllFeeds(); }
+
+// --- Keyboard shortcuts ---
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { document.body.classList.toggle('hidden-mode'); return; }
+    if (document.activeElement === document.getElementById('search')) return; // don't intercept while typing
+    if (e.key === 'r' || e.key === 'R') { e.preventDefault(); manualRefresh(); }
+    else if (e.key === 'h' || e.key === 'H') { e.preventDefault(); toggleReadDeals(); }
+    else if (e.key === '/') { e.preventDefault(); document.getElementById('search').focus(); }
+});
+
+// --- Search & sort live listeners ---
+document.getElementById('search').addEventListener('input', renderDeals);
+document.getElementById('sort').addEventListener('change', renderDeals);
+Object.keys(FEEDS).forEach(k => {
+    document.getElementById(`feed-${k}`).addEventListener('change', fetchAllFeeds);
+});
+
+// --- Auto-refresh every 15 min ---
+setInterval(fetchAllFeeds, 15 * 60 * 1000);
+
+// --- Initial load ---
+fetchAllFeeds();
+</script>
 </body>
 </html>
